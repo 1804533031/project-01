@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript"src="./js/jquery.js">	
+		</script>
+	</head>
+	<body>
+		<a href="https://echarts.apache.org/zh/index.html" target="w2">这是让2.html跳转超链接</a>
+		<div id="">	
+		</div>
+		<button type="button">单击显示日期时间</button>
+		<script type="text/javascript">
+			$('button').click(function(){
+				let time= new Date();
+			var y=time.getFullYear();
+			var m=time.getMonth()+1;
+				m>10?  m:m="0"+m
+			var d=time.getDate();
+				d>10?  d:d="0"+d
+			$('div').html(`${y}年${m}月${d}日`);	
+			})
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript"src="js/jquery.js">
+			
+		</script>
+	</head>
+	<body>
+		<button type="button">单击颜色随机变化</button>
+		<div id="">
+		</div>
+		<script type="text/javascript">
+		const arr=["red","green","blue","yellow"];
+			$('button').click(function(){
+				setInterval(function(){
+					var num=Math.round(Math.random()*(arr.length-1))
+					$('div').html(arr[num]);
+					$('div').css("color",arr[num]);
+				},1000)
+				
+			})
+		</script>
+	</body>
+</html>
